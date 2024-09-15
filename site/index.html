@@ -1,37 +1,60 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>NGINX on Railway</title>
-    <meta name="description" content="Choo Choo!" />
-
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="/styles.css?v=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    
+    <script type="module" crossorigin src="/assets/index-DKFWJ9J-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DvFjuEqY.css">
   </head>
-
   <body>
-    <main>
-      <img
-        src="https://railway.app/brand/logo-light.svg"
-        alt="Railway logo"
-        class="logo"
-      />
+    <div  id="app">
+      <div class="side-section">
+        <h3>Username</h3>
+        <input id="inputName" type="text"/>
+        <h3>Rooms</h3>
+        <form id="add-room-form" >
+          <label for="input_name">Nombre:</label>
+          <input type="text" id="input_name"/>
+          <button type="submit">Add</button>
 
-      <h1>NGINX on Railway</h1>
+        </form>
+        <table id="rooms">
+          <tr>
+            <th>ID</th>
+            <th>Players</th>
+            <th>Action</th>
+          </tr>
+        
+        </table>
+      </div>
+      <canvas width="750px" height="750px"></canvas>
+      <div class="side-section">
+        <h3>Players</h3>
+        <table id="players">
+          <tr>
+            <th>Username</th>
+            <th>Color</th>
+            <th>Saved</th>
+          </tr>
+          
+        </table>
 
-      <p>
-        Choo Choo! This is an example of an NGINX static site running on
-        Railway.
-        <a
-          href="https://github.com/railwayapp/starters/tree/master/examples/nginx"
-          >View source</a
-        >.
-      </p>
-    </main>
+        <h3>Turn</h3>
+        <span id="current-turn"></span>
 
-    <script src="/script.js"></script>
+        <h3>Roller</h3>
+        <span id="dice-number">6</span>
+        <button  id="roller-button">Roller dice</button>
+        <h3>Results</h3>
+        <ol id="result-list">
+
+        </ol>
+      </div>
+    </div>
+
+
   </body>
 </html>
